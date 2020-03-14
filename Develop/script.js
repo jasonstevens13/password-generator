@@ -23,31 +23,15 @@ function generatePassword() {
   var passwordLowerCase = prompt('Do you want to use lower case characters?');
   var passwordSpecialChars = prompt('Do you want to use special characters?');
 
+  if (passwordCharLength >= 8 && passwordCharLength <= 128) {
+    return passwordCharLength;
+  } else {
+    alert('Your password length must be between 8 and 128 characters. Please try again.')
+    generatePassword();
+  }
+
   return passwordCharLength;
 }
-  // if (charLength.num1 >= 8 && charLength.num1 <= 128) {
-  //   alert('Thank You');
-  //   return num1;
-  // }
-
-
-
-  //   else {
-  //     alert('Sorry, that will not work. Please select a number between 8 and 128.');
-  //     generatePassword();
-
-  //   }
-
-  // }
-  // if (charLength >= 8 && charLength <= 128) {
-  //   alert('Thank You');
-  //   return;
-  // } else {
-  //   alert('Sorry, that will not work. Please select a number between 8 and 128.');
-  //   generatePassword();
-  // }
-  //   }
-
 
 
 
