@@ -18,15 +18,31 @@ generateBtn.addEventListener("click", writePassword);
 
 
 function generatePassword() {
-  var charLength = prompt('How many characters would you like your password to be? Requirments: between 8 and 128 characters.', num1);
-  if (charLength >= 8 && charLength <= 128) {
-    alert('Thank You');
-    return;
-  } else {
-    alert('Sorry, that will not work. Please select a number between 8 and 128.');
-    generatePassword();
-  }
+  var passwordCharLength = Number(prompt('How many characters would you like your password to be? Requirement: betweek 8 and 128.', ""));
+
 }
+  // if (charLength.num1 >= 8 && charLength.num1 <= 128) {
+  //   alert('Thank You');
+  //   return num1;
+  // }
+
+
+
+  //   else {
+  //     alert('Sorry, that will not work. Please select a number between 8 and 128.');
+  //     generatePassword();
+
+  //   }
+
+  // }
+  // if (charLength >= 8 && charLength <= 128) {
+  //   alert('Thank You');
+  //   return;
+  // } else {
+  //   alert('Sorry, that will not work. Please select a number between 8 and 128.');
+  //   generatePassword();
+  // }
+  //   }
 
 
 
@@ -34,4 +50,3 @@ function generatePassword() {
   // Then prompt whether using lower case.
   // Then prompt whether using uppercase.
   // Then prompt whether using special characters.
-}
