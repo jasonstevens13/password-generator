@@ -3,6 +3,8 @@ var generateBtn = document.querySelector("#generate");
 var lowerCaseChar = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 var upperCaseChar = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 var specialChar = ['!', '"', '#', '$', '%', '&', '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '>', '=', '?', '@', '[', ']', '^', '_', '`', '{', '}', '~'];
+var numberTypeChar = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
 
 // Write password to the #password input
 function writePassword() {
@@ -19,9 +21,7 @@ generateBtn.addEventListener("click", writePassword);
 
 function generatePassword() {
   var passwordCharLength = Number(prompt('How many characters would you like your password to be? Requirement: between 8 and 128.', ""));
-  var passwordUpperCase = prompt('Do you want to use upper case characters?');
-  var passwordLowerCase = prompt('Do you want to use lower case characters?');
-  var passwordSpecialChars = prompt('Do you want to use special characters?');
+  var passwordContent = passwordCharLength;
 
   if (passwordCharLength >= 8 && passwordCharLength <= 128) {
     return passwordCharLength;
@@ -30,7 +30,16 @@ function generatePassword() {
     generatePassword();
   }
 
-  return passwordCharLength;
+  var passwordUpperCase = confirm('Do you want to use upper case characters?');
+  var passwordLowerCase = confirm('Do you want to use lower case characters?');
+  var passwordSpecialChars = confirm('Do you want to use special characters?');
+  var passwordNumberChars = confirm('Do you want to use numbers in your password?');
+
+  if (passwordUpperCase) {
+
+  }
+
+
 }
 
 
