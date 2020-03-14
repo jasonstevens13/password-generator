@@ -18,7 +18,7 @@ generateBtn.addEventListener("click", writePassword);
 
 
 function generatePassword() {
-  var passwordCharLength = Number(prompt('How many characters would you like your password to be? Requirement: betweek 8 and 128.', ""));
+  var passwordCharLength = Number(prompt('How many characters would you like your password to be? Requirement: between 8 and 128.', ""));
 
 }
   // if (charLength.num1 >= 8 && charLength.num1 <= 128) {
