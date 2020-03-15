@@ -5,6 +5,7 @@ var upperCaseChar = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'I', 'J', 'K',
 var specialChar = ['!', '"', '#', '$', '%', '&', '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '>', '=', '?', '@', '[', ']', '^', '_', '`', '{', '}', '~'];
 var numberTypeChar = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var allCharTypes = [];
+// var passwordCharLengthFinal = passwordCharLength;
 
 // Write password to the #password input
 function writePassword() {
@@ -20,11 +21,11 @@ generateBtn.addEventListener("click", writePassword);
 
 
 function generatePassword() {
+
   var passwordCharLength = Number(prompt('How many characters would you like your password to be? Requirement: between 8 and 128.', ""));
 
-
   if (passwordCharLength >= 8 && passwordCharLength <= 128) {
-    return passwordCharLength;
+
   } else {
     alert('Your password length must be between 8 and 128 characters. Please try again.')
     generatePassword();
@@ -50,23 +51,49 @@ function generatePassword() {
     allCharTypes.push(numberTypeChar);
   }
 
+  // At least one of the char types must be chosen, so we have to create a block..
+  if (passwordUpperCase === false && passwordLowerCase === false && passwordSpecialChars === false && passwordNumberChars === false) {
+    alert('You must choose at least 1 character type. Please start over.');
+    generatePassword();
+  }
+
+  return passwordCharLength;
+
+
+  for (let i = 0; i < passwordCharLength.length; i++) {
+    var passwordString = '';
+    const element = passwordCharLength[i];
+    passwordString.concat(i);
+
+  }
+
+  generatePassword();
+
+
+  // function arrayCharSelectors(arraySelectors) {
+  //   var arrayParam1 = allCharTypes[Math.floor(Math.random() * 10) + 1;];
+  //   var arrayParam2 = allCharTypes[Math.floor(Math.random() * 10) + 1;];
+  //   var arraySelectors = [arrayParam1][arrayParam2]
+  // }
+
+  // function passwordWriter(arraySelectors) {
+  //   toString();
+  // }
+
+  // return;
 
 }
 
-console.log(allCharTypes);
+// console.log(allCharTypes);
 
 // let randomValue1 = lowerCaseChar[Math.floor(Math.random() * lowerCaseChar.length)];
 // let randomValue2 = upperCaseChar[Math.floor(Math.random() * upperCaseChar.length)];
 // let randomValue3 = specialChar[Math.floor(Math.random() * specialChar.length)];
 // let randomValue4 = numberTypeChar[Math.floor(Math.random() * numberTypeChar.length)];
 
+// let randomValue4 = allCharTypes[Math.floor(Math.random()][Math.floor(Math.random()];
 
-// Loop X number of times, where X is the number of characterts chose by user.
-for (var i = 0; i < passwordCharLength.length; i++) {
-  // Generate a random number between 1 and 10
-  // Math.floor will round down, meaning we would get a number between 0 and 9, so we'll always add 1 to bump it up.
-  var num = Math.floor(Math.random() * passwordCharLength.length) + 1;
+// var arrayParam1 = allCharTypes[Math.floor(Math.random() * allCharTypes.length)];
+// var arrayParam2 = arrayParam1[Math.floor(math.random() * arrayParam1.length)]);
+// var arrayParam3 = [arrayParam1][arrayParam2];
 
-  // Display in console
-  console.log(num);
-}
