@@ -5,6 +5,7 @@ var upperCaseChar = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var specialChar = '!"#$%&()*+-./:;<>=?@[]^_`{}~';
 var numberTypeChar = '0123456789';
 var allCharTypes = '';
+var tempPassword2 = '';
 // var passwordCharLengthFinal = passwordCharLength;
 
 // Write password to the #password input
@@ -20,15 +21,15 @@ generateBtn.addEventListener("click", writePassword);
 
 function generatePassword() {
     var tempPassword = '';
+    var tempPassword2 = '';
     var passwordCharLength = Number(prompt('How many characters would you like your password to be? Requirement: between 8 and 128.', ""));
     if (passwordCharLength >= 8 && passwordCharLength <= 128) {
 
     } else {
         alert('Your password length must be between 8 and 128 characters. Please try again.')
         generatePassword();
+        return;
     }
-
-    console.log(tempPassword);
 
     var passwordUpperCase = confirm('Do you want to use upper case characters?');
     var passwordLowerCase = confirm('Do you want to use lower case characters?');
@@ -39,6 +40,7 @@ function generatePassword() {
         tempPassword = tempPassword + upperCaseChar;
         console.log(tempPassword);
     }
+
     if (passwordLowerCase) {
         tempPassword = tempPassword + lowerCaseChar;
         console.log(tempPassword);
@@ -51,47 +53,45 @@ function generatePassword() {
 
     if (passwordNumberChars) {
         tempPassword = tempPassword + numberTypeChar;
-        console.log(tempPassword);;
+        console.log(tempPassword);
     }
 
     // At least one of the char types must be chosen, so we have to create a block..
     if (passwordUpperCase === false && passwordLowerCase === false && passwordSpecialChars === false && passwordNumberChars === false) {
         alert('You must choose at least 1 character type. Please start over.');
         generatePassword();
+        return;
     }
 
+    console.log(passwordCharLength);
+    console.log(tempPassword);
+
+    // for (let i = 0; i < passwordCharLength; i++) {
+    //     tempPassword.charAt[Math.floor(Math.random() * passwordCharLength)];
+    //     console.log();
+
+    // }
+
+
+    for (var i = 0; i < passwordCharLength.length; i++) {
+        temppassword2 = tempPassword2.push(tempPassword.charAt[Math.floor(Math.random() * tempPassword.length)]);
+    }
+    return tempPassword;
 
 }
 
 
 
-// function generatePassword() {
 
 
 
 
+// for (let i = 0; i < passwordCharLength.length; i++) {
+//     var passwordString = '';
+//     const element = passwordCharLength[i];
+//     passwordString.concat(i);
 
-
-
-
-
-//     console.log(allCharTypes);
-
-
-//     for (let i = 0; i < passwordCharLength.length; i++) {
-//         var charEach = allCharTypes[Math.floor(Math.random() * allCharTypes.length)][Math.floor(Math.random() * allCharTypes.length)];
-
-//     }
-
-//     return passwordCharLength;
-
-
-//     for (let i = 0; i < passwordCharLength.length; i++) {
-//         var passwordString = '';
-//         const element = passwordCharLength[i];
-//         passwordString.concat(i);
-
-//     }
+// }
 
 //     generatePassword();
 
