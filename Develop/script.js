@@ -57,17 +57,25 @@ function generatePassword() {
     generatePassword();
   }
 
-  return passwordCharLength;
+  console.log(allCharTypes);
 
 
-  for (let i = 0; i < passwordCharLength.length; i++) {
-    var passwordString = '';
-    const element = passwordCharLength[i];
-    passwordString.concat(i);
+  // for (let i = 0; i < passwordCharLength.length; i++) {
+  //   var charEach = allCharTypes[Math.floor(Math.random() * allCharTypes.length)][Math.floor(Math.random() * allCharTypes.length)];
 
-  }
+  // }
 
-  generatePassword();
+  // return passwordCharLength;
+
+
+  // for (let i = 0; i < passwordCharLength.length; i++) {
+  //   var passwordString = '';
+  //   const element = passwordCharLength[i];
+  //   passwordString.concat(i);
+
+  // }
+
+  // generatePassword();
 
 
   // function arrayCharSelectors(arraySelectors) {
