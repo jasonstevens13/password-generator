@@ -12,12 +12,12 @@ The application was built by way of html, bootstrap styling therein, and Javascr
 
 # How to Use
 1. The user must click the 'Generate Password' button to initiate the applications functionality.
-![app](./assets/img1.jpg)
+![app](/img1.jpg)
 2. The use is then prompted with a question, "How many characters would you like your password to be? Requirement: between 8 and 128." 
-![charNumPrompt](./assets/img2.jpg)
+![charNumPrompt](/img2.jpg)
 3. If the user enters an input that is not a numeral, or a number that is less than 8 or greater than 128, they are alerted with, "Your password length must be between 8 and 128 characters. Please try again."
-![alert](./assets/img3.jpg)
+![alert](/img3.jpg)
 4. Once a valide number is entered, the user is presented with the following confirm prompts that are answered as yes/no response: 'Do you want to use upper case characters?;' 'Do you want to use lower case characters?;' 'Do you want to use special characters?;' 'Do you want to use numbers in your password?'
-![confirmExample](./assets/img4.jpg)
+![confirmExample](/img4.jpg)
 5. The application then traverses through a string of all character types chosen, and generates a random password that is the same number of characters as the user's initial input.
-![result](./assets/img5.jpg)
+![result](/img5.jpg)
